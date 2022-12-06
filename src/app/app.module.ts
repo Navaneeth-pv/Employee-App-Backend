@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewAllEmployeeComponent } from './view-all-employee/view-all-employee.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 const myRoute:Routes=[
   {
@@ -14,7 +17,7 @@ const myRoute:Routes=[
   },
   {
     path:"view",
-    component:ViewAllEmployee
+    component:ViewAllEmployeeComponent
   }
 ]
 
@@ -22,12 +25,15 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AddEmployeeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewAllEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

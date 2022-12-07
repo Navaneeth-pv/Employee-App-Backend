@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee Code</label>
+                    <input name="employeeCode"[(ngModel)]="employeeCode" type="text" class="form-control">
+                
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValue()" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-4" *ngFor="let j of searchData">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Designation</label>
+                    <input  type="text" class="form-control" value="{{j.designation}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" value="{{j.companyName}}" >
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Mobile No</label>
+                    <input type="text" class="form-control" value="{{j.mobNo}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">UserName</label>
+                    <input type="text" class="form-control" value="{{j.userName}">
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+</div>

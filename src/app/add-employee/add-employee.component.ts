@@ -23,7 +23,7 @@ export class AddEmployeeComponent {
 
     console.log(data)
 
-    this.api.addCorse(data).subscribe(
+    this.api.addEmployee(data).subscribe(
       (response:any)=>{
         console.log(response)
   

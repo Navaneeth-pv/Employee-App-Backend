@@ -12,9 +12,13 @@ export class ApiService {
   {
     return this.http.get("http://localhost:8080/viewall")
   }
-  addCorse=(dataTosend:any)=>
+  addEmployee=(dataTosend:any)=>
   {
 
     return this.http.post("http://localhost:8080/add",dataTosend)
+  }
+  SearchEmployee=(dataTosend:any)=>
+  {
+    return this.http.get("http://localhost:8080/search",dataTosend)
   }
 }
